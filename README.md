@@ -141,14 +141,15 @@ sudo systemctl restart jenkins
   - <b>Associate IAM OIDC Provider (Master machine)</b>
   ```bash
   eksctl utils associate-iam-oidc-provider \
-    --region us-east-2 \
+    --region ap-south-1 \
     --cluster wanderlust \
     --approve
   ```
   - <b>Create Nodegroup (Master machine)</b>
+  before creating nodegroup create keypair - eks-nodegroup-key
   ```bash
   eksctl create nodegroup --cluster=wanderlust \
-                       --region=us-east-2 \
+                       --region=ap-south-1 \
                        --name=wanderlust \
                        --node-type=t2.large \
                        --nodes=2 \

@@ -73,7 +73,7 @@ Install & Configure Docker by using below command, "NewGrp docker" will refresh 
 sudo apt-get update
 ```
 ```bash
-sudo apt-get install docker.io -y
+sudo apt-get install docker.io -y docker-compose-v2
 sudo usermod -aG docker ubuntu && newgrp docker
 ```
 #
